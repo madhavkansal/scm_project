@@ -1,7 +1,7 @@
 
 
        document.addEventListener('DOMContentLoaded', function() {  // Fixed syntax error: comma instead of parenthesis
-    // DOM Elements
+   
     const taskInput = document.getElementById('task-input');
     const priorityBtn = document.getElementById('priority-btn');
     const priorityOptions = document.getElementById('priority-options');
