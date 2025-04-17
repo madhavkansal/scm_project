@@ -587,7 +587,7 @@
             opacity: 1;
         }
 
-        /* Responsive */
+        /*  making website Responsive */
         @media (max-width: 768px) {
             .task-stats {
                 flex-wrap: wrap;
