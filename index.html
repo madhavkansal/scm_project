@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Professional To-Do App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-check-circle"></i> TaskMaster</h1>
+            <p>Stay organized and boost your productivity</p>
+            <div class="task-stats">
+                <div class="stat-item">
+                    <i class="fas fa-tasks"></i>
+                    <span id="total-tasks">0</span> tasks
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-check"></i>
+                    <span id="completed-tasks">0</span> completed
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-hourglass-half"></i>
+                    <span id="pending-tasks">0</span> pending
+                </div>
+            </div>
+        </header>
+
+        <div class="task-form">
+            <input type="text" id="task-input" class="task-input" placeholder="Add a new task...">
+            <div class="priority-dropdown">
+                <button class="priority-btn" id="priority-btn">
+                    <span id="selected-priority">Priority</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="priority-options" id="priority-options">
+                    <div class="priority-option" data-value="high">
+                        <i class="fas fa-circle" style="color: #e74c3c;"></i>
+                        High
+                    </div>
+                    <div class="priority-option" data-value="medium">
+                        <i class="fas fa-circle" style="color: #f39c12;"></i>
+                        Medium
+                    </div>
+                    <div class="priority-option" data-value="low">
+                        <i class="fas fa-circle" style="color: #27ae60;"></i>
+                        Low
+                    </div>
+                </div>
+            </div>
+            <button class="submit-btn" id="add-task-btn">
+                <i class="fas fa-plus"></i> Add Task
+            </button>
+        </div>
+
+        <div class="task-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="high">High Priority</button>
+            <button class="filter-btn" data-filter="medium">Medium Priority</button>
+            <button class="filter-btn" data-filter="low">Low Priority</button>
+        </div>
+
+        <div class="task-list" id="task-list">
+            <!-- Tasks will be added here dynamically -->
+        </div>
+
+        <div class="app-footer">
+            <p>Your tasks are saved locally and will not be lost when you close this page.</p>
+            <button class="clear-btn" id="clear-all-btn">Clear All Tasks</button>
+        </div>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div class="modal-overlay" id="edit-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Edit Task</h3>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="edit-task-input">Task Name</label>
+                    <input type="text" id="edit-task-input" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="edit-priority-select">Priority</label>
+                    <select id="edit-priority-select" class="form-control">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel-btn" id="cancel-edit-btn">Cancel</button>
+                <button class="modal-btn save-btn" id="save-edit-btn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <div class="notification-content">
+            <div class="notification-title" id="notification-title">Success</div>
+            <div class="notification-message" id="notification-message">Task added successfully!</div>
+        </div>
+        <button class="notification-close" id="notification-close">&times;</button>
+    </div>
+</body>
+</html>
