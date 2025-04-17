@@ -13,8 +13,7 @@
     const totalTasksEl = document.getElementById('total-tasks');
     const completedTasksEl = document.getElementById('completed-tasks');
     const pendingTasksEl = document.getElementById('pending-tasks');
-    
-    // Edit Modal Elements
+
     const editModal = document.getElementById('edit-modal');
     const editTaskInput = document.getElementById('edit-task-input');
     const editPrioritySelect = document.getElementById('edit-priority-select');
