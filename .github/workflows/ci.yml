@@ -1,0 +1,16 @@
+name: Simple CI Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubintu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run simple echo
+        run: echo "Pull Request created! Good job team!"
